@@ -1,4 +1,4 @@
-const addIcon = document.querySelector("#add-icon");
+const addIcon = document.querySelector(".icon-class");
 const todoInput = document.querySelector("#todo-input");
 const todoUl = document.querySelector("#todo-ul");
 
@@ -90,14 +90,18 @@ todoUl.addEventListener("click", (event) => {
     //? ilgili li elementinde checked adinda bir class'i varsa bunu sil
     //?  aksi takdirde ekle (DOM)
     // event.target.parentElement.classList.toggle("checked");
-
-    const currentLi = event.target.parentElement;
-    // console.log(currentLi);
-    const chechkedStatus = currentLi.classList.contains("checked");
-    if (chechkedStatus) {
-      currentLi.classList.remove("checked");
-    } else {
-      currentLi.classList.add("checked");
-    }
+    const toggleFunc = () => {
+      const currentLi = event.target.parentElement;
+      // console.log(currentLi);
+      const chechkedStatus = currentLi.classList.contains("checked");
+      if (chechkedStatus) {
+        currentLi.classList.remove("checked");
+      } else {
+        currentLi.classList.add("checked");
+      }
+    };
+    toggleFunc();
   }
 });
+
+// todo li ye basınca da üstünü çizsin
