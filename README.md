@@ -1,1 +1,3 @@
-# to_do_app
+## Demo
+
+![To-do App](todo-app.gif)
